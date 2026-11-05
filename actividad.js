@@ -101,10 +101,42 @@
   document.getElementById('reiniciar').addEventListener('click', empezar);
   empezar();
 
-  // Formulario: en este borrador no se envía a ningún lado.
-  // Aquí se conecta el Google Form del equipo.
-  document.getElementById('interes').addEventListener('submit', function (e) {
+    var URL_SCRIPT = 'https://script.google.com/u/0/home/projects/1fns9ipqouvB4W-9UkNo-5hd_myfZV3Dps77o62gbEOgx5tgt_RP2hPKg/edit';
+
+  var form = document.getElementById('interes');
+  var aviso = document.getElementById('aviso');
+
+  form.addEventListener('submit', async function (e) {
     e.preventDefault();
-    document.getElementById('aviso').textContent = 'Borrador: en la versión final esto se conecta al formulario del equipo.';
+    var boton = form.querySelector('button[type="submit"]');
+    boton.disabled = true;
+    aviso.textContent = 'Enviando…';
+
+    var datos = {
+      nombre: form.nombre.value,
+      rol: form.rol.value,
+      correo: form.correo.value,
+      consentimiento: form.consentimiento.checked
+    };
+
+    try {
+      var r = await fetch(URL_SCRIPT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(datos)
+      });
+      var res = await r.json();
+      if (res.ok) {
+        aviso.textContent = '¡Gracias! Te escribiremos pronto.';
+        form.reset();
+      } else {
+        aviso.textContent = 'Revisa que todos los campos estén completos.';
+      }
+    } catch (err) {
+      aviso.textContent = 'No pudimos enviar tus datos. Revisa tu conexión e inténtalo otra vez.';
+    } finally {
+      boton.disabled = false;
+    }
+  });
   });
 })();
