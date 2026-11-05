@@ -138,5 +138,4 @@
       boton.disabled = false;
     }
   });
-  });
 })();
