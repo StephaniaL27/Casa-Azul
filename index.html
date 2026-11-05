@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Casa Azul</title>
+  <meta name="description" content="Casa Azul: app educativa para niños autistas de hasta 13 años que une a la familia, el colegio y los profesionales.">
+  <link rel="icon" href="img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Nunito:wght@400;600;800;900&display=swap">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<!-- CONTENIDO -->
+<header class="portada">
+  <div class="wrap portada-grid">
+    <div class="stack">
+      <img class="logo" src="img/logo.png" alt="Casa Azul" width="900" height="597">
+      <span class="chip">Proyecto en etapa de ideación</span>
+      <h1>Aprender juntos, <span>a su manera.</span></h1>
+      <p class="lead">Una app educativa para niños autistas de hasta 13 años que une al estudiante, su familia, sus profes y sus terapeutas en un mismo lugar. Poco tiempo de pantalla, solo para aprender y siempre con un adulto a cargo.</p>
+      <div class="ctas">
+        <a class="btn" href="#actividad">Prueba una actividad</a>
+        <a class="btn claro" href="#contacto">Quiero saber más</a>
+      </div>
+    </div>
+    <div class="escena" aria-hidden="true">
+      <img class="fig f-corazon" src="img/figura-9.png" alt="">
+      <img class="fig f-estrella" src="img/figura-15.png" alt="">
+      <img class="fig f-fantasma" src="img/figura-10.png" alt="">
+      <img class="fig f-gota" src="img/figura-3.png" alt="">
+      <img class="grupo" src="img/grupo.png" alt="">
+    </div>
+  </div>
+</header>
+
+<section class="banda-actividad" id="actividad">
+  <div class="wrap">
+    <div class="act-intro">
+      <div class="stack">
+        <span class="eyebrow">Así se vería una actividad</span>
+        <h2>Ayuda a Tomi a ordenar su mañana</h2>
+        <p class="suave">Toca los dibujos en el orden en que pasan cada mañana. La rutina la define la familia o el docente.</p>
+      </div>
+      <img src="img/tomi-tablet.png" alt="Tomi sostiene una tablet con una actividad de Casa Azul" width="341" height="321">
+    </div>
+    <div class="act-grid">
+      <div class="tarjeta" aria-live="polite">
+        <div class="tarjeta-cab">
+          <span class="eyebrow">Exploradores · 4 a 6 años</span>
+          <span class="nivel">Rutinas con apoyo visual</span>
+        </div>
+        <div id="juego" class="stack">
+          <p class="pregunta" id="pregunta">¿Qué hace Tomi primero?</p>
+          <div class="huecos" id="huecos"></div>
+          <div class="fichas" id="fichas"></div>
+          <p class="mensaje" id="mensaje"></p>
+        </div>
+        <div id="fin" class="fin" hidden>
+          <div class="despedida">
+            <h3>¡Lo lograste! Por hoy terminamos.</h3>
+            <p>Ahora cuéntale a alguien de tu familia qué haces tú primero al despertar.</p>
+          </div>
+          <div class="familia">
+            <span class="eyebrow">Lo que ve la familia</span>
+            <div class="datos">
+              <div class="dato"><b id="dTiempo">0:00</b><span>Tiempo de la sesión</span></div>
+              <div class="dato"><b id="dPrimera">0/4</b><span>Pasos al primer intento</span></div>
+              <div class="dato"><b id="dPistas">0</b><span>Pistas usadas</span></div>
+            </div>
+            <p class="nota">La sesión se cierra con una despedida, sin botón de “jugar otra vez”.</p>
+          </div>
+          <button class="btn claro mini" id="reiniciar" type="button">Reiniciar demostración</button>
+        </div>
+      </div>
+      <div class="cuidados">
+        <h3>Qué cuidamos en cada actividad</h3>
+        <p class="cuidado">Si el niño se equivoca, recibe una pista suave. Nada de sonidos fuertes ni colores de alarma.</p>
+        <p class="cuidado">Una sola instrucción a la vez, con dibujos grandes y fáciles de tocar.</p>
+        <p class="cuidado">Al terminar, la app se despide y propone algo para hacer fuera de la pantalla.</p>
+        <p class="cuidado">La familia ve cuánto tiempo se usó y cómo le fue al niño.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="historia">
+  <div class="wrap">
+    <div class="capitulo">
+      <img class="ilus tomi-triste" src="img/tomi-triste.png" alt="Tomi, frustrado" width="215" height="322">
+      <div class="stack">
+        <span class="eyebrow">La historia de Tomi</span>
+        <h2>Tomi aprende a su manera</h2>
+        <p>Pero el aula no siempre se adapta a él: mucho ruido, poco tiempo, todo igual para todos. Los niños autistas aprenden de formas distintas, y los entornos educativos casi nunca se adaptan a su manera de comunicarse, procesar información y prestar atención.</p>
+      </div>
+    </div>
+    <div class="capitulo invertido">
+      <img class="ilus ilus-ancha" src="img/separados.png" alt="Mamá, la profe y la terapeuta, cada una con su propio aparato y sin conexión entre ellas" width="875" height="382">
+      <div class="stack">
+        <h2>Cada quien con su propia herramienta</h2>
+        <p>Nada conectado. Nadie sabía lo que hacía el otro. La familia usa unas herramientas en casa, la profe otras en el aula y la terapeuta las suyas. Nadie tiene la visión completa del proceso del niño.</p>
+      </div>
+    </div>
+    <div class="capitulo llegada">
+      <img class="ilus ilus-ancha" src="img/conectados.png" alt="Mamá, la profe y la terapeuta conectadas por la casita de Casa Azul" width="863" height="455">
+      <div class="stack">
+        <h2>Hasta que llegó <span>Casa Azul</span></h2>
+        <p>Un mismo lugar para Tomi, su familia, sus profes y sus terapeutas. Cada persona entra con su propio rol y todos ven cómo avanza.</p>
+      </div>
+    </div>
+
+    <div class="versiones">
+      <div class="version">
+        <span class="eyebrow">Versión gratuita</span>
+        <h3>Para familias y público general</h3>
+        <p>Juegos, talleres y actividades didácticas y de apoyo.</p>
+      </div>
+      <div class="version inst">
+        <span class="eyebrow">Versión institucional</span>
+        <h3>Para colegios y centros especializados</h3>
+        <p>Un entorno académico que se adapta a la metodología, los objetivos y el sistema educativo de cada institución.</p>
+      </div>
+    </div>
+    <div class="roles">
+      <div class="rol"><h3>Estudiante</h3><p>Juegos, talleres y material académico a su medida.</p></div>
+      <div class="rol"><h3>Familia</h3><p>Supervisa, define los tiempos y recibe orientación de un asistente virtual.</p></div>
+      <div class="rol"><h3>Docente</h3><p>Un aula extendida para adaptar contenidos y asignar actividades.</p></div>
+      <div class="rol"><h3>Profesionales</h3><p>Acompañan y siguen el proceso de cada estudiante.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="pantallas" style="padding-top:0">
+  <div class="wrap dividido">
+    <div class="stack">
+      <span class="eyebrow">Uso responsable</span>
+      <p class="frase">No queremos más pantalla. Queremos mejor pantalla.</p>
+    </div>
+    <ul class="reglas">
+      <li><img src="img/figura-9.png" alt=""><span>Límites de tiempo por edad, configurados por la familia o el colegio.</span></li>
+      <li><img src="img/figura-15.png" alt=""><span>Pausas obligatorias entre actividades.</span></li>
+      <li><img src="img/figura-3.png" alt=""><span>Sin publicidad, sin videos automáticos, sin scroll infinito y sin chat con desconocidos.</span></li>
+      <li><img src="img/figura-6.png" alt=""><span>Actividades que continúan en papel, con las manos o con la familia.</span></li>
+      <li><img src="img/figura-11.png" alt=""><span>Siempre con un adulto a cargo, que decide qué contenido se usa y cuándo.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="edades" style="padding-top:0">
+  <div class="wrap stack">
+    <span class="eyebrow">Hasta 13 años, en tres etapas</span>
+    <h2>Cada edad tiene su contenido y su ritmo</h2>
+    <div class="edades">
+      <div class="edad"><span class="rango">4 a 6 años</span><b>Exploradores</b><p>Rutinas, emociones básicas, colores, formas y comunicación con apoyo visual.</p></div>
+      <div class="edad"><span class="rango">7 a 9 años</span><b>Aprendices</b><p>Lectoescritura, matemáticas básicas y habilidades sociales.</p></div>
+      <div class="edad"><span class="rango">10 a 13 años</span><b>Constructores</b><p>Contenidos académicos de primaria, organización y autonomía.</p></div>
+    </div>
+    <p class="suave">La duración de cada sesión se definirá junto con terapeutas y docentes durante la validación.</p>
+  </div>
+</section>
+
+<section id="impacto" style="padding-top:0">
+  <div class="wrap stack" style="gap:24px">
+    <span class="eyebrow">Nuestro impacto</span>
+    <div class="ods">
+      <div class="ods-item"><span class="ods-num">ODS<br>4</span><p>Educación adaptada, inclusiva y personalizada.</p></div>
+      <div class="ods-item"><span class="ods-num">ODS<br>10</span><p>Menos barreras para participar en el colegio.</p></div>
+      <div class="ods-item"><span class="ods-num">ODS<br>9</span><p>Tecnología usada con responsabilidad.</p></div>
+    </div>
+    <span class="eyebrow" style="margin-top:24px">Equipo</span>
+    <div class="equipo">
+      <div><b>Sara Haag</b><span>Dirección Ejecutiva y Administrativa</span></div>
+      <div><b>Isabella Obispo</b><span>Co-Dirección de Tecnología y Desarrollo</span></div>
+      <div><b>Stephania Lamadrid</b><span>Co-Dirección de Tecnología y Desarrollo</span></div>
+      <div><b>Juan M. Bolívar</b><span>Dirección de Educación y Experiencia de Usuario</span></div>
+      <div><b>Mariana Jiménez</b><span>Dirección de Marketing y Comunicaciones</span></div>
+      <div><b>María Riascos</b><span>Dirección de Alianzas y Relaciones Institucionales</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="cierre" id="contacto">
+  <div class="wrap cierre-grid">
+    <div class="stack">
+      <span class="eyebrow">¿Te interesa Casa Azul?</span>
+      <h2>Déjanos tus datos y te contamos cómo avanza</h2>
+      <p class="suave">Buscamos familias, docentes, colegios y centros especializados que quieran ayudarnos a validar la idea.</p>
+      <p class="suave">Síguenos en Instagram</p>
+      <a class="ig" href="https://www.instagram.com/casaa_azull/" target="_blank" rel="noopener">@casaa_azull</a>
+    </div>
+    <form id="interes">
+      <label for="f-nombre">Nombre<input id="f-nombre" name="nombre" required autocomplete="name"></label>
+      <label for="f-rol">Soy…
+        <select id="f-rol" name="rol" required>
+          <option value="">Elige una opción</option>
+          <option>Familia</option>
+          <option>Docente</option>
+          <option>Terapeuta o profesional</option>
+          <option>Colegio o centro especializado</option>
+          <option>Otro</option>
+        </select>
+      </label>
+      <label for="f-correo">Correo<input id="f-correo" name="correo" type="email" required autocomplete="email"></label>
+      <button class="btn" type="submit">Enviar</button>
+      <p class="aviso" id="aviso" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<footer class="wrap">Casa Azul · Feria de Emprendimiento · Categoría Ideación · Borrador preliminar</footer>
+<!-- /CONTENIDO -->
+
+<script src="actividad.js"></script>
+</body>
+</html>
