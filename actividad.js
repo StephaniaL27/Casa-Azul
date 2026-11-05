@@ -101,7 +101,7 @@
   document.getElementById('reiniciar').addEventListener('click', empezar);
   empezar();
 
-    var URL_SCRIPT = 'https://script.google.com/u/0/home/projects/1fns9ipqouvB4W-9UkNo-5hd_myfZV3Dps77o62gbEOgx5tgt_RP2hPKg/edit';
+    var URL_SCRIPT = 'https://script.google.com/macros/s/AKfycbyg-5-tS4ia6HzV3VXBGIJvi2sATIW9G8DZcc6UQcAs0xU9QHh4o3rJ8c3xjqE2CjlP/exec';
 
   var form = document.getElementById('interes');
   var aviso = document.getElementById('aviso');
